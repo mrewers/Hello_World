@@ -1,0 +1,23 @@
+  h1 {
+    color: rgb(12,70,150);
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h2 {
+    color: rgb(12,70,150);
+    font-family: sans-serif;
+  }
+  h3 {
+    color: rgb(12,70,150);
+    font-family: sans-serif;
+  }
+  p {
+    font-family: sans-serif;
+    font-size: .85em;
+  }
+  footer {
+    font-family: sans-serif;
+    font-size: .70em;
+    text-decoration: overline;
+  }
