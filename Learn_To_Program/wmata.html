@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone-no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+  <script type="text/javascript" src="cordova.js"></script>
+  <title>Metro App</title>
+  <link rel="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="key.js"></script>
+  <script src="stops.js"></script>
+  <script src="buses.js"></script>
+  <style>
+    .center
+    {
+      text-align: center;
+    }
+
+    .small
+    {
+      font-size: .5em;
+    }
+
+    h1
+    {
+      font-size: 2.25em;
+      color: black;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div data-role="header"><h1>Buses</h1></div>
+    <div id="content">
+      <ul id="busSchedWest" data-role="listview">
+        <li data-role="list-divider">Westbound</li>
+      </ul>
+      <ul id="busSchedEast" data-role="listview">
+        <li data-role="list-divider">Eastbound</li>
+      </ul>
+    </div>
+    <button id="btnNext">Next Bus</button>
+    <div data-role="footer" id="footer"><p class="center">Created by Mrewers</p></div>
+  </div>
+</body>
