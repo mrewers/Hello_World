@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <title>Location</title>
+    <script src="key.js"></script>
+    <script>
+      window.onload=function()
+      {
+          document.addEventListener('deviceready', init)
+          //init
+      }
+
+      function init()
+      {
+        navigator.geolocation.getCurrentPosition(success, failure, options);
+        enableHighAccuracy:true
+      }
+
+      function success(position)
+      {
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+        //var alt = position.coords.altitude;
+
+        document.getElementById('lat').innerHTML = lat;
+        document.getElementById('long').innerHTML = long;
+        //document.getElementById('alt').innerHTML = alt;
+      }
+
+      function getAreaInfo(lat, long)
+      {
+        var url =
+        var url += lat + ",";
+        var url += long;
+        var url +=  + key;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = processPlace;
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+      }
+
+      function processPlace()
+      {
+        var out="";
+        if(xmlhttp.readyState==4){
+          var theJSON = xmlhttp.responseText;
+
+          var result = JSON.parse(theJSON);
+          var resultArray = result.results;
+          for (var x = 0; x < resultArray.length; x++)
+          {
+            out
+            out
+            out
+          }
+          console.log(theJSON.results)
+        }
+      }
+
+      function failure(message)
+      {
+        alert("Error" + message.message);
+      }
+      </script>
+    </head>
+    <body>
+    </body>
+</html>
