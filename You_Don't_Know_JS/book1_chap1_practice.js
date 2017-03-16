@@ -1,4 +1,4 @@
-//Variables
+//VARIABLES
 
 a = 21; // Defines variable a
 b = a * 2; // Defines variable b as an expression of a multiplied by two
@@ -21,3 +21,7 @@ console.log( b );   // Outputs 42 - number
 // Implicit coercion
 
 "99.99" == 99.99 // JS will implicitly coerce left-handed string to it's number equivalent
+
+// STATEMENT
+a = b * 2 + foo(c * 3); // Below add brackets to identify all the expressions
+[ [a] = [ [ [b] * [2] ] + [ [ foo ]( [[c] * [3]] ) ] ] ]; // Total of  11 expressions compose this statement
