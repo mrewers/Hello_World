@@ -73,3 +73,45 @@ var celsius = 12;
 var fahrenheit = celsius * 1.8 + 32 // convert celsius to fahrenheit here
 
 console.log(fahrenheit + " degrees Fahrenheit"); // print out result here
+
+// Quiz - concat the lines of this poem to form an haiku
+var haiku = "Blowing from the west" + "\nFallen leaves gather" + "\nIn the east."
+console.log(haiku);
+
+// Quiz
+var thingOne = "red";
+var thingTwo = "blue";
+console.log(thingOne + " " + thingTwo);
+
+// Create variable fullName and assign it a value
+var fullName = "Marek Rewers";
+
+/* Create a variable called bill and assign it the result of 10.25 + 3.99 + 7.15.
+ * Next, create a variable called tip and assign it the result of multiplying bill by a 15% tip rate.
+ * Finally, add the bill and tip together and store it into a variable called total. */
+var bill = (10.25 + 3.99 + 7.15);
+var tip = 0.15 * bill;
+var total = bill + tip;
+console.log(total);
+
+/* For this exercise, use the adjective variables below to fill in the blanks and complete the following message.
+ * The Intro to JavaScript course is __________. James and Julia are so __________. I cannot wait to work through the rest of this __________ content!"
+ * Assign the resulting string to a variable called madLib. */
+
+var adjective1 = 'amazing';
+var adjective2 = 'fun';
+var adjective3 = 'entertaining';
+
+// your code goes here
+var madLib = "The Intro to JavaScript course is " + adjective1 + ". James and Julia are so " + adjective2 + ". I cannot wait to work through the rest of this " + adjective3 + " content!";
+console.log(madLib);
+
+/* Declare and assign values to three variables for each part of the sentence that changes (firstName, interest, and hobby).
+ * Use your variables and string concatenation to create your own awesome message and store it in an awesomeMessage variable.
+ * Finally, print your awesome message to the JavaScript console. */
+ var firstName = "Marek";
+ var interest = "history";
+ var hobby = "code";
+
+ var awesomeMessage = "Hi, my name is " + firstName + ". I love " + interest + ". In my spare time, I like to " + hobby + ".";
+ console.log(awesomeMessage);

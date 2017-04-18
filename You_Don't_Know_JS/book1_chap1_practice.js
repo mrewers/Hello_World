@@ -1,3 +1,9 @@
+/* YOU DON'T KNOW JAVASCRIPT INTRODUCTION
+ * Notes and practice examples from You Don't Know JS book 1 (Up & Going)
+ * Also includes notes from the Front End Masters course Intro to JS
+ * taught by Kyle Simpson
+ */
+
 // VARIABLES
 
   a = 21; // Defines variable a
@@ -7,10 +13,10 @@
   // Variables should always be formally declared (before they are used) using one of the below:
   var a = 42;
 
-  let b = 2; // Block scoping declarations
-  const c = 21; // Block scoping declarations
+  let b = 2; // Block scoping declarations (ES6)
+  const c = 21; // Block scoping declarations (ES6)
 
-  function d() {}
+  function d() {} // Declaring variable d as a function
 
 // OUTPUTS-INPUTS
 
@@ -52,15 +58,33 @@
   a = a + "";
     console.log(a); // JS will implicitly coerce the 42 into it's string equivalent
 
-  // Coercing Booleans, if falsy - false, otherwise - true
-  // "Falsy" values:
-    0
-    -0
-    NaN
-    ""
-    false
-    null
-    undefined
+// FUNCTIONS
+  // Block of code that groups several tasks that you can call it to run whenever you like
+  // Can be declared as:
+  function foo() {} // function declaration
+
+  var bar = function() {} // function expressions attached to function declarations
+  var bar = function baz() {}
+
+  var a = 10;
+  function foo(){
+  	a = a * 2;
+  	a = a + 3;
+  };
+  foo();
+  console.log(a); // returns 23
+  foo();
+  foo();
+  console.log(a); // returns 101
+
+  // Passing a parameter
+  var a = 10;
+  function bar(b) { // b is a parameter, as it is declared
+    a = a * 2;
+    a = a + b;
+  };
+  bar(100);         // 100 is an argument
+  console.log(a);
 
 // BLOCK
 
@@ -70,3 +94,53 @@
     foo(a / 2);
   }
   // Won't get executed unless attached to something (conditional, loop, function)
+
+// IF STATEMENT
+
+  // Must pass a boolean value, if not passed it must be inferred
+  if (a > 10) {
+    b = 5;
+    foo(a/b)
+  }
+
+  // Inferring Booleans, if falsy - false, otherwise - true
+  // "Falsy" values:
+    0
+    -0
+    NaN
+    ""
+    false
+    null
+    undefined
+
+  var a = 10;
+  if (a) {      // a is inferred to be true, since 10 is not falsy
+    a = a * 2;
+  }
+
+// LOOPS
+// Runs until something stops it from running
+
+  while (a > 10) {...}
+
+  for (a = 5; a < 10; a++ ) { // Three (optional) parts: initiation expression, conditional expression, update clause
+    console.log(a)
+  }
+  // This loop returns:
+  5
+  6
+  7
+  8
+  9
+
+  // Conceptually the above for loop is the same as running the below while loop:
+  a = 5;
+  while (true) {
+    if (a >= 10) {
+      break;
+    }
+    console.log(a);
+    a = a + 1;
+
+// SCOPE
+// You can always referrence outside of your scope but not inside of a scope
