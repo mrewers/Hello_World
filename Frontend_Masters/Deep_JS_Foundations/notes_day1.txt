@@ -6,6 +6,8 @@ Foundations of JS:
   2) Scope and closures system
   3) This and object prototype systems
 
+------- DAY 1 -------
+
 Computers are better at efficiently compiling code than we as humans will ever be. Rather than obsessing over the most efficient and instructive way to write, focus more on communicating what the code is supposed to accomplish. Be more declarative about your code: write code that describes what you want to happen.
 
 It's not just the code you write that's important, the code you don't write is also important. Most languages don't properly communicate the

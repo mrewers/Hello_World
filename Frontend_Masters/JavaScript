@@ -1,0 +1,18 @@
+alert - writes result to pop up window
+document.write - writes result to the document
+console.log - writes result to the console
+
+Reserved Words - Can't be used as variables:
+  case
+  catch
+  for
+  let
+  private
+  this
+  with
+  in
+  do
+
+var name = "Marek";
+var age = 30;
+alert("My name is " + name +)
