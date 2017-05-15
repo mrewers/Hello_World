@@ -1,0 +1,54 @@
+Agenda
+  - Introductions
+  - Elastic Company Overview
+  - Prerequisites, Cloud, and downloading
+  - Getting Started Demo
+
+Intros:
+  - Lee Hinman - Developer
+  - Shane Connelly - Product Manager
+
+  Elastic Stack:
+  ___________________________________________________________________
+  | User Interface          |       Kibana       |  X  : Security   |
+  |-------------------------+--------------------|  P  : Alerting   |
+  | Store, Index, Analyze   |   Elasticsearch    |  a  : Monitoring |
+  |-------------------------+--------------------|  c  : Reporting  |
+  | Ingest                  | Logstash |  Beats  |  k  : Graph      |
+  |-----------------------------------------------------------------|
+  |                           Elastic Cloud                         |
+  |_________________________________________________________________|
+
+Beats: lightweight shipper to get data into ES
+Logstash: also a shipper to get data to ES - covers more traditional load & transform functionalities
+Kibana: application that displays data + platform that you can build application upon
+Elastic Cloud: ES as a managed service
+
+Today's Developer Requirements
+  - Horizontal Scale
+  - Real-Time Availability
+  - Flexible Data Model - NoSQL JSON based model
+  - Rapid Query Execution
+  - Sophisticated Query Language
+  - Schemaless
+
+Use Cases:
+
+    IT Operations       |    Marketing Insights   |   Website/App Search
+Application Management  |   Business Development  | Internal/Intranet Search
+  Security Analytics    |    Customer Sentiment   |       URL Search
+------------------------|-------------------------|---------------------------
+Security   |    Log     |  Metrics  | Operational |  Website  | Application
+Analytics  | Analytics  | Analytics |  Analytics  |  Search   |   Search
+
+<===== Internal Systems/Apps ===================== External Systems/Apps =====>
+
+  Developers  -  Architects  -  IT/Ops  -  Business Analysts   -  CTO/CIO/CDO
+
+Product site: elastic.co
+
+One prerequisite for elastic is Java (full compatibility is available - search support matrix)
+Installation guides available in the docs (for Ubuntu: https://www.elastic.co/guide/en/elasticsearch/reference/5.x/deb.html)
+
+When running elastic search runs on localhost:9200
+Kibana runs on localhost:5601
