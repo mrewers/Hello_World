@@ -10,11 +10,17 @@
 <body>
 
   <div id='app'>
-    <h1>
+    <h1 v-once>
       {{ title }}
     </h1>
-    <input type='text' v-on:input='addRun'>
-    <p>{{ run }}</p>
+    <p>
+      My name is Marek I build websites like <a v-bind:href='link'>CryptoPapers</a>
+    </p>What is your name?</p>
+    <input type='text' v-on:input='addName'>
+    <button v-on:click>Click me</button>
+    <p>{{ counter }}</p>
+
+    <p>{{ sayHello() }} {{ name }}! If you enjoy this, make sure to also visit <a v-html='finishedLink'></a></p>
   </div>
 
   <script>
@@ -22,11 +28,49 @@
       el: '#app',
       data: {
         title: 'Galloping Pika',
-        run: 'test'
+        link: 'https://cryptopapers.info',
+        name: '',
+        finishedLink: '<a href="https://www.orrsescape.com">Orr\'s Escape</a>',
+        counter: 0
       },
       methods: {
-        addRun: function(event) {
-          this.run = event.target.value;
+        sayHello: function() {
+          return 'Hey ';
+        },
+        addName: function(event) {
+          this.name = event.target.value;
+        }
+      }
+    });
+  </script>
+
+  <h2>Exercises</h2>
+  <h3>Set 1</h3>
+  <div id='exercise'>
+    <ol>
+      <li>"I think VueJS is pretty cool" - {{ myName }} ({{ age }})</li>
+      <li>My age times three = {{ age * 3}}</li>
+      <li>Random number between 0 and 100: {{ randomNumber() }}</li>
+    </ol>
+    <div>
+      <img v-bind:src='imgLink' style='height:300px'>
+    </div>
+    <div>
+      <p>Name this cute guy: <input type='text' v-bind:placeholder='myName'></p>
+    </div>
+  </div>
+
+  <script>
+    new Vue ({
+      el: '#exercise',
+      data: {
+        myName: 'Marek',
+        age: '31',
+        imgLink: 'https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA4NS83ODEvb3JpZ2luYWwvYW1lcmljYW4tcGlrYS11c2dzLmpwZw=='
+      },
+      methods: {
+        randomNumber: function() {
+          return Math.floor(Math.random() * 100);
         }
       }
     });
