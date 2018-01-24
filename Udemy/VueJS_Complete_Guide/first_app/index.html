@@ -17,10 +17,17 @@
       My name is Marek I build websites like <a v-bind:href='link'>CryptoPapers</a>
     </p>What is your name?</p>
     <input type='text' v-on:input='addName'>
-    <button v-on:click>Click me</button>
-    <p>{{ counter }}</p>
 
     <p>{{ sayHello() }} {{ name }}! If you enjoy this, make sure to also visit <a v-html='finishedLink'></a></p>
+
+    <button v-on:click='increase(2, $event)'>Click me</button>
+    <p>How many times can I get you to click the button? {{ counter }}</p>
+    <p v-on:mousemove='updateCoordinates'>
+      Coordinates: {{ x }} / {{ y }}
+      - <span v-on:mousemove.stop=''> DEAD SPOT</span>
+    </p>
+
+    <input type='text' v-on:keyup.enter='alertMe'>
   </div>
 
   <script>
@@ -31,7 +38,9 @@
         link: 'https://cryptopapers.info',
         name: '',
         finishedLink: '<a href="https://www.orrsescape.com">Orr\'s Escape</a>',
-        counter: 0
+        counter: 0,
+        x: 0,
+        y: 0
       },
       methods: {
         sayHello: function() {
@@ -39,14 +48,53 @@
         },
         addName: function(event) {
           this.name = event.target.value;
+        },
+        increase: function(step, event) {
+          this.counter+= step;
+        },
+        updateCoordinates: function(event) {
+          this.x = event.clientX;
+          this.y = event.clientY;
+        },
+        alertMe: function() {
+          alert('Alert!');
         }
       }
     });
   </script>
 
-  <h2>Exercises</h2>
+<h2>Exercises</h2>
+  <h3>Set 2</h3>
+  <div id='exercise2'>
+    <div>
+      <button v-on:click='showAlert'>Show Alert</button>
+    </div>
+    <div>
+      <input type='text' v-on:keydown='value = $event.target.value'>
+      <p>{{ value }}</p>
+    </div>
+    <div>
+      <input type='text' v-on:keydown.enter='value = $event.target.value'>
+      <p>{{ value }}</p>
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#exercise2',
+      data: {
+        value: ''
+      },
+      methods: {
+        showAlert: function() {
+          alert('Boom Shakalaka');
+        }
+      }
+    });
+  </script>
+
   <h3>Set 1</h3>
-  <div id='exercise'>
+  <div id='exercise1'>
     <ol>
       <li>"I think VueJS is pretty cool" - {{ myName }} ({{ age }})</li>
       <li>My age times three = {{ age * 3}}</li>
@@ -62,7 +110,7 @@
 
   <script>
     new Vue ({
-      el: '#exercise',
+      el: '#exercise1',
       data: {
         myName: 'Marek',
         age: '31',
