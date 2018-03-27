@@ -57,14 +57,30 @@
     }
 
     .hand {
-      width: 50%;
-      height: 6px;
-      background: black;
       position: absolute;
       top:50%;
       transform-origin: 100%;
       transition: all 0.05s;
       transition-timing-function: cubic-bezier(0, 2.51, 0.39, 0.91);
+    }
+
+    .second-hand {
+      width: 50%;
+      height: 3px;
+      background: red;
+    }
+
+    .min-hand {
+      width:50%;
+      height:6px;
+      background: black;
+    }
+
+    .hour-hand {
+      width: 40%;
+      height: 6px;
+      background: black;
+      margin-left: 10%;
     }
 
   </style>
@@ -79,14 +95,23 @@
 
       const seconds = now.getSeconds();
       const secondsDegrees = ((seconds / 60) * 360) + 90;
+      if (seconds == 0) {
+        secondHand.style.transition = "all 0s";
+      }
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
       const minutes = now.getMinutes();
       const minutesDegrees = ((minutes / 60) * 360) + 90;
+      if (minutes == 0) {
+        secondHand.style.transition = "all 0s";
+      }
       minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
       const hours = now.getHours();
       const hoursDegrees = ((hours / 12) * 360) + 90;
+      if (hours == 0) {
+        secondHand.style.transition = "all 0s";
+      }
       hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 
     }
