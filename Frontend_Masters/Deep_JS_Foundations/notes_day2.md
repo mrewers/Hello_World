@@ -6,8 +6,9 @@ Foundations of JS:
   2) Scope and closures system
   3) This and object prototype systems
 
-------- DAY 2 -------
+## DAY 2
 
+```js
   var foo = "bar";
 
   function bar() {
@@ -18,3 +19,4 @@ Foundations of JS:
     foo = "bam";
     ban = "yay";
   }
+```
