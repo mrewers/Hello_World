@@ -10,7 +10,6 @@ app.on('ready', () => {
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.show();
-    getFileFromUserSelection();
   });
 
   mainWindow.on('closed', () => {
@@ -18,7 +17,7 @@ app.on('ready', () => {
   });
 });
 
-const getFileFromUserSelection = () => {
+const getFileFromUserSelection = exports.getFileFromUserSelection = () => {
   const files = dialog.showOpenDialog({
     properties: ['openFile'],
     filters: [
