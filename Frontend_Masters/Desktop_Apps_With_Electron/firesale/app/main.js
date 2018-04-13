@@ -2,22 +2,29 @@ const { app, BrowserWindow, dialog } = require('electron');
 const fs = require('fs');
 
 let mainWindow = null;
+const windows = new Set();
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({ show: false });
-
-  mainWindow.loadURL(`file://${__dirname}/index.html`);
-
-  mainWindow.once('ready-to-show', () => {
-    mainWindow.show();
-  });
-
-  mainWindow.on('closed', () => {
-    mainWindow = null;
-  });
+  createWindow();
 });
 
-const getFileFromUserSelection = exports.getFileFromUserSelection = () => {
+const createWindow = exports.createWindow = () => {
+  let newWindow = new BrowserWindow({ show: false });
+  windows.add(newWindow);
+
+  newWindow.loadURL(`file://${__dirname}/index.html`);
+
+  newWindow.once('ready-to-show', () => {
+    newWindow.show();
+  });
+
+  newWindow.on('closed', () => {
+    windows.delete(newWindow);
+    newWindow = null;
+  });
+}
+
+const getFileFromUserSelection = exports.getFileFromUserSelection = (targetWindow) => {
   const files = dialog.showOpenDialog({
     properties: ['openFile'],
     filters: [
@@ -31,8 +38,10 @@ const getFileFromUserSelection = exports.getFileFromUserSelection = () => {
   return files[0];
 };
 
-const openFile = exports.openFile = (filePath) => {
+const openFile = exports.openFile = (targetWindow, filePath) => {
   const file = filePath || getFileFromUserSelection();
   const content = fs.readFileSync(file).toString();
-  mainWindow.webContents.send('file-opened', file, content);
+  targetWindow.webContents.send('file-opened', file, content);
+  targetWindow.setTitle(`${file} | Fire Sale`);
+  targetWindow.setRepresentedFilename(file);
 }
