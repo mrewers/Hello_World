@@ -11,13 +11,29 @@ const saveMarkdownButton = document.querySelector('#save-markdown');
 const revertButton = document.querySelector('#revert');
 const saveHtmlButton = document.querySelector('#save-html');
 
+let filePath = null;
+let originalContent = '';
+
 const renderMarkdownToHTML = (markdown) => {
   htmlView.innerHTML = marked(markdown, { sanitize: true });
 };
 
-markdownView.addEventListener('keyup', (e) => {
-  renderMarkdownToHTML(e.target.value);
-  currentWindow.setDocumentEdited(true);
+const updateEditedState = (isEdited) => {
+  currentWindow.setDocumentEdited(isEdited);
+
+  saveMarkdownButton.disabled = !isEdited;
+  revertButton.disabled = !isEdited;
+
+  let title = 'Fire Sale';
+  if (filePath) title = `${filePath} | ${title}`;
+  if (isEdited) title = `${title} (Edited)`;
+  currentWindow.setTitle(title);
+};
+
+markdownView.addEventListener('keyup', (event) => {
+  const currentContent = event.target.value;
+  renderMarkdownToHTML(currentContent);
+  currentWindow.setDocumentEdited(currentContent !== originalContent);
 });
 
 newFileButton.addEventListener('click', () => {
@@ -28,7 +44,26 @@ openFileButton.addEventListener('click', () => {
   mainProcess.openFile(currentWindow);
 });
 
-ipcRenderer.on('file-opened', (e, file, content) => {
+saveMarkdownButton.addEventListener('click', () => {
+  mainProcess.saveMarkdown(currentWindow, filePath, markdownView.value);
+});
+
+ipcRenderer.on('file-opened', (event, file, content) => {
+  filePath = file;
+  originalContent = content;
+
   markdownView.value = content;
   renderMarkdownToHTML(content);
+
+  updateEditedState(false);
+});
+
+ipcRenderer.on('file-changed', (event, file, content) => {
+  filePath = file;
+  originalContent = content;
+
+  markdownView.value = content;
+  renderMarkdownToHTML(content);
+
+  updateEditedState(false);  
 });
