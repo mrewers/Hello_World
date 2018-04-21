@@ -20,9 +20,22 @@
     </div>
 
     <div class="">
-      <button type="button" name="change" onclick="handlers.changeTodo()">Change To-Do</button>
+      <h3>Update to-do:</h3>
       <input type="number" id="changeTodoPositionInput">
       <input type="text" id="changeTodoTextInput">
+      <button type="button" name="change" onclick="handlers.changeTodo()">Change</button>
+    </div>
+
+    <div class="">
+      <h3>Delete to-do:</h3>
+      <input type="number" id="deleteTodoPositionInput">
+      <button type="button" name="change" onclick="handlers.deleteTodo()">Delete</button>
+    </div>
+
+    <div class="">
+      <h3>Toggle Completed:</h3>
+      <input type="number" id="toggleCompletedPositionInput">
+      <button type="button" name="change" onclick="handlers.toggleCompleted()">Toggle</button>
     </div>
 
     <script src="script.js"></script>
