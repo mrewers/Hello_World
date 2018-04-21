@@ -8,11 +8,26 @@
   <body>
     <h1>My To-Do's!</h1>
 
-    <button type="button" id="displayTodosButton" name="display">Display To-Do's</button>
-    <button type="button" id="toggleAllButton"  name="toggle-all">Toggle All</button>
+    <div>
+      <button type="button" name="display" onclick="handlers.displayTodos()">Display To-Do's</button>
+      <button type="button" name="toggle-all" onclick="handlers.toggleAll()">Toggle All</button>
+    </div>
+
+    <div>
+      <h3>Add a new to-do:</h3>
+      <input type="text" id="addTodoTextInput">
+      <button type="button" name="add" onclick="handlers.addTodo()">Add</button>
+    </div>
+
+    <div class="">
+      <button type="button" name="change" onclick="handlers.changeTodo()">Change To-Do</button>
+      <input type="number" id="changeTodoPositionInput">
+      <input type="text" id="changeTodoTextInput">
+    </div>
+
+    <script src="script.js"></script>
 
   </body>
 
-  <script src="script.js"></script>
 
 </html>
