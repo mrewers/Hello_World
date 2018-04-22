@@ -1,3 +1,7 @@
 .number-input {
   width: 60px;
 }
+
+.delete-button {
+  margin-left: 10px;
+}

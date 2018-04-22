@@ -43,6 +43,7 @@ var handlers = {
     var newTodoTextInput = document.getElementById('addTodoTextInput');
     todoList.addTodo(newTodoTextInput.value);
     newTodoTextInput.value = '';
+    view.todoPlaceholder();
     view.displayTodos();
   },
   changeTodo: function() {
@@ -53,11 +54,10 @@ var handlers = {
     newTodoTextInput.value = '';
     view.displayTodos();
   },
-  deleteTodo: function() {
-    var removedTodoPositionInput = document.getElementById('deleteTodoPositionInput');
-    todoList.deleteTodo(removedTodoPositionInput.valueAsNumber - 1);
-    removedTodoPositionInput.value = '';
+  deleteTodo: function(index) {
+    todoList.deleteTodo(index);
     view.displayTodos();
+    view.todoPlaceholder();
   },
   toggleCompleted: function() {
     var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
@@ -72,6 +72,14 @@ var handlers = {
 };
 
 var view = {
+  todoPlaceholder: function() {
+    const placeholder = document.getElementById('placeholder-text');
+    if (todoList.todos.length > 0) {
+      placeholder.style.display = "none";
+    } else {
+      placeholder.style.display = "block";
+    }
+  },
   displayTodos: function() {
     var todosUl = document.querySelector('ul');
     todosUl.innerHTML = '';
@@ -86,8 +94,28 @@ var view = {
         todoTextWithStatus = '( ) ' + todo.todoText;
       }
 
+      todosLi.id = i;
       todosLi.textContent = todoTextWithStatus;
+      todosLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todosLi);
     }
+  },
+  createDeleteButton: function() {
+    var deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'delete-button'
+    return deleteButton;
+  },
+  setUpEventListeners: function() {
+    var todosUl = document.querySelector('ul');
+
+    todosUl.addEventListener('click', function( e ) {
+      var elementClicked = e.target;
+      if (elementClicked.className === 'delete-button') {
+        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+      }
+    });
   }
 };
+
+view.setUpEventListeners();

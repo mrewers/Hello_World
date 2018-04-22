@@ -26,16 +26,12 @@
     </div>
 
     <div class="button-group">
-      <h3>Delete to-do:</h3>
-      <input type="number" id="deleteTodoPositionInput" class="number-input" placeholder="Todo #">
-      <button type="button" name="delete" onclick="handlers.deleteTodo()">Delete</button>
-    </div>
-
-    <div class="button-group">
       <h3>Toggle Completed:</h3>
       <input type="number" id="toggleCompletedPositionInput" class="number-input" placeholder="Todo #">
       <button type="button" name="toggle-completed" onclick="handlers.toggleCompleted()">Toggle</button>
     </div>
+
+    <p id="placeholder-text">Your to-do list is empty!</p>
 
     <ul class="todos-list">
     </ul>
