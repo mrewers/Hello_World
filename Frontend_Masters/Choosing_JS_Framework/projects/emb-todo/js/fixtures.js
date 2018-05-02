@@ -5,27 +5,27 @@ Todos.Todo = Todos.Todo || {};
 Todos.Todo.FIXTURES = [
  {
    id: 1,
-   val: 'Learn Ember.js',
+   val: 'Chrome Dev Tools',
    completed: true
  },
  {
    id: 2,
-   val: 'Banana for Scale',
-   completed: false
+   val: 'Electron Apps',
+   completed: true
  },
  {
    id: 3,
-   val: 'Puppies',
+   val: 'CSS Grids',
    completed: false
  },
  {
   id: 4,
-  val: 'Duck sized horse',
-  completed: true
+  val: 'JS Frameworks',
+  completed: false
  },
  {
   id: 5,
-  val: 'Horse-sized duck',
+  val: 'Intro to React',
   completed: false
  }
 ];
