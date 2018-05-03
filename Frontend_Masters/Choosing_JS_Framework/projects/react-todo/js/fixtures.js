@@ -1,9 +1,9 @@
 // This is so you don't have to type up dummy data.
 var app = app || {};
 app.FIXTURES = [
-  {val: 'Such task', completed:true},
-  {val: 'Much productivity', completed: true},
-  {val: 'So business', completed: false},
-  {val: 'Wow', completed: false},
-  {val: 'To the moon!', completed: true}
+  { val: "Chrome Dev Tools", completed: true },
+  { val: "Electron Apps", completed: true },
+  { val: "CSS Grids", completed: false },
+  { val: "JS Frameworks", completed: false },
+  { val: "Intro to React", completed: false },
 ];
