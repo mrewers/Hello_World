@@ -7,32 +7,7 @@
 
   <body>
     <div class="" id="app">
-      <script type="text/javascript" src="node_modules/react/dist/react.js"></script>
-      <script type="text/javascript" src="node_modules/react-dom/dist/react-dom.js"></script>
-      <script type="text/javascript">
-        const ce = React.createElement
-
-        const MyTitle = function( props ) {
-          return (
-            ce('div', null,
-              ce('h1', { style: { color: props.color } }, props.title)
-            )
-          )
-        }
-
-        const MyFirstComponent = function() {
-          return ce('div', { id: 'title-list'},
-            ce( MyTitle, { title: 'The Wire', color: 'peru' } ),
-            ce( MyTitle, { title: 'Game of Thrones', color: 'papayawhip' } ),
-            ce( MyTitle, { title: 'Better Call Saul', color: 'lime' } )
-          )
-        }
-
-        ReactDOM.render(
-          ce(MyFirstComponent),
-          document.getElementById('app')
-        )
-      </script>
+      <script type="text/javascript" src="public/bundle.js"></script>
     </div>
   </body>
 
