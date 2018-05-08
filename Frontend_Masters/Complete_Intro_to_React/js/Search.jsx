@@ -4,15 +4,17 @@ import preload from '../data.json';
 
 const Search = () => (
   <div className="search">
-    {preload.shows.map(show => (
-      <ShowCard
-        key={show.imdbID}
-        poster={show.poster}
-        title={show.title}
-        year={show.year}
-        description={show.description}
-      />
-    ))}
+    <div>
+      {preload.shows.map(show => (
+        <ShowCard
+          key={show.imdbID}
+          poster={show.poster}
+          title={show.title}
+          year={show.year}
+          description={show.description}
+        />
+      ))}
+    </div>
   </div>
 );
 
