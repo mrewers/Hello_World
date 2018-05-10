@@ -1,21 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ShowCard from './ShowCard';
 import preload from '../data.json';
 
-const Search = () => (
-  <div className="search">
-    <div>
-      {preload.shows.map(show => (
-        <ShowCard
-          key={show.imdbID}
-          poster={show.poster}
-          title={show.title}
-          year={show.year}
-          description={show.description}
-        />
-      ))}
-    </div>
-  </div>
-);
+class Search extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      searchTerm: ''
+    };
+    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
+  }
+  handleSearchTermChange(event) {
+    this.setState({ searchTerm: event.target.value });
+  }
+  render() {
+    return (
+      <div className="search">
+        <header>
+          <h1>Video</h1>
+          <input
+            value={this.state.searchTerm}
+            type="text"
+            onChange={this.handleSearchTermChange}
+            placeholder="Search"
+          />
+        </header>
+        <div>
+          {preload.shows.map(show => (
+            <ShowCard
+              key={show.imdbID}
+              poster={show.poster}
+              title={show.title}
+              year={show.year}
+              description={show.description}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Search;
