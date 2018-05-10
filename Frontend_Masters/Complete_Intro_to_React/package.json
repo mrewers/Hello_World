@@ -5,6 +5,9 @@
     "dev": "webpack-dev-server",
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:update": "jest -u",
     "watch": "webpack --watch"
   },
   "dependencies": {
@@ -62,6 +65,9 @@
     "react-hot-loader": "3.0.0-beta.6",
     "react-test-renderer": "15.5.4",
     "webpack-dev-server": "2.4.5"
+  },
+  "jest": {
+    "snapshotSerializers": ["jest-serializer-enzyme"]
   },
   "name": "complete-intro-to-react",
   "version": "3.0.0",
