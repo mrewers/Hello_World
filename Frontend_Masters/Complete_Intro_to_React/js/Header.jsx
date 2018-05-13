@@ -7,7 +7,7 @@ import { setSearchTerm } from './actionCreators';
 
 const Header = (props: {
   showSearch?: boolean,
-  handleSearchTermChange?: Function,
+  handleSearchTermChange: Function,
   searchTerm: string // eslint-disable-line react/no-unused-prop-types
 }) => {
   let utilSpace;
