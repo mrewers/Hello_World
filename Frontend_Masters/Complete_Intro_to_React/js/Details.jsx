@@ -45,7 +45,7 @@ class Details extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const apiData = state.apiData[ownProps.show.imdbID] ? state.apiData[ownProps.show.imdb] : {};
+  const apiData = state.apiData[ownProps.show.imdbID] ? state.apiData[ownProps.show.imdbID] : {};
   return {
     rating: apiData.rating
   };
