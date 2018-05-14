@@ -27,7 +27,7 @@ server.use(
     publicPath: config.output.publicPath
   })
 );
-server.use('/public', express.static('./public'));
+server.use(webpackHotMiddleware(compiler));
 
 server.use('/public', express.static('./public'));
 
