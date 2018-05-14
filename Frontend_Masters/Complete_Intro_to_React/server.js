@@ -8,6 +8,7 @@ const ReactDOMServer = require('react-dom/server');
 const ReactRouter = require('react-router-dom');
 const _ = require('lodash');
 const fs = require('fs');
+const compression = require('compression');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpack = require('webpack');
@@ -21,6 +22,7 @@ const template = _.template(baseTemplate);
 
 const server = express();
 
+server.use(compression());
 const compiler = webpack(config);
 server.use(
   webpackDevMiddleware(compiler, {
