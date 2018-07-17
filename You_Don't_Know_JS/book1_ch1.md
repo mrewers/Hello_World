@@ -170,6 +170,7 @@ Conceptually the above for loop is the same as running the below while loop:
     }
     console.log(a);
     a = a + 1;
+  }
 ```
 
 ## SCOPE
