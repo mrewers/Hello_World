@@ -5,11 +5,13 @@
  */
 export default class ListenerSupport {
   constructor() {
+     /** @type {function(ArrayLike<object>)[]} */
     this._listeners = [];
   }
   
   /**
    * Register a listener
+   * @param {function(ArrayLike<object>)} listener
    * @return {void}
    */
   registerListener(listener) {
@@ -18,6 +20,7 @@ export default class ListenerSupport {
 
   /**
    * Un-register a listener
+   * @param {function(ArrayLike<object>)} listener
    * @return {void}
    */
   unregisterListener(listener) {
@@ -27,6 +30,7 @@ export default class ListenerSupport {
 
   /**
    * Fire an event, synchronously invoking all listener callbacks that have been registered
+   * @param {{data: ArrayLike<object>}} payload
    * @see #register 
    */
   fire(payload) {

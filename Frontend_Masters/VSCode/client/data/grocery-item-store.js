@@ -2,6 +2,11 @@ import ListenerSupport from './listener-support';
 import { endpoint as API_ENDPOINT } from '../utils/api';
 
 /**
+ * @typedef {Object} GroceryItem
+ */
+
+
+/**
  * A class for keeping track of grocery item state
  * @public
  */
@@ -13,6 +18,7 @@ export default class GroceryItemStore {
    */
   constructor() {
     // restore items to get their initial state
+    /** @type {GroceryItem[]} */
     this._items = [];
     this._restoreItems().then((restoredItems) => {
       this._items = restoredItems;
@@ -75,7 +81,7 @@ export default class GroceryItemStore {
    * and update existing ones to reflect any changes in properties
    *  
    * @private
-   * @param {any} data array of grocery items to push into the store
+   * @param {GroceryItem[]} data array of grocery items to push into the store
    * @return {void}
    */
   _updateItems(data) {
@@ -118,15 +124,15 @@ export default class GroceryItemStore {
    * @public
    * @return {any}
    */
-  updateCategories() {
-    return fetch(`${API_ENDPOINT}api/grocery/categories`)
-      .then((resp) => resp.json())
-      .then((jsonData) => {
-        let categories = jsonData.data.map(item => item.category);
-        this._categories = categories;
-        this._onCategoriesUpdated();
-        return this.categories;
-      })
+    updateCategories() {
+      return fetch(`${API_ENDPOINT}api/grocery/categories`)
+        .then((resp) => resp.json())
+        .then((jsonData) => {
+          let categories = /** @type {{category: string}[]} */(jsonData.data).map(item => item.category);
+          this._categories = categories;
+          this._onCategoriesUpdated();
+          return this.categories;
+    })
       .catch((err) => {
         console.error('Error updating categories', err);
         return this.categories;

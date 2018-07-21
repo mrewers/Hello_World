@@ -12,6 +12,7 @@ export default class OrderStore {
    * @public
    */
   constructor() {
+    // @ts-ignore
     this._items = [];
     this.refresh();
     this.orderListeners = new ListenerSupport();
@@ -47,6 +48,7 @@ export default class OrderStore {
    * Get an individual order by id
    * This will result a new API request being made
    * 
+   * @param {number} id
    * @public
    */
   getOrderById(id) {
