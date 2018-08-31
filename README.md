@@ -11,6 +11,7 @@
   1. [Choosing a JavaScript Framework](https://github.com/btholt/jsmvc-pres)
   1. [Complete Intro to React, v3 (feat. Redux, Router & Flow)](https://github.com/btholt/complete-intro-to-react)
   1. [CSS Grids and Flexbox in Responsive Web](https://github.com/jen4web/fem-layout/)
+  1. [Introduction to Vue.js](https://github.com/sdras/intro-to-vue)
   1. [Mastering Chrome Developer Tools](https://github.com/jkup/mastering-chrome-devtools)
   1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo)
   1. [Visual Studio Code](https://github.com/mike-works/vscode-fundamentals)
