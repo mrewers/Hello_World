@@ -3,6 +3,9 @@
 ## [Cryptozombies](./Cryptozombies)
 
 ## [Frontend Masters](./Frontend_Masters)
+
+[Frontend Masters](https://frontendmasters.com/)
+
 <details>
   <summary>Original GitHub repos/info pages for FEM courses</summary>
 
@@ -29,6 +32,16 @@
   1. [Complete Intro to Web Development, v2](https://btholt.github.io/intro-to-web-dev-v2/)
   1. [Full Stack for Front End Engineers](https://docs.google.com/presentation/d/1FPpbZ919vt8e1k2EGPd7BKhDlHao79ykvYLfDcMOsMo/edit#slide=id.p)
   1. Introduction to JavaScript Programming
+</details>
+
+## [KnowThen](./KnowThen)
+
+[KnowThen](https://courses.knowthen.com/courses/)
+
+<details>
+  <summary>Original GitHub repos/info pages for FEM courses</summary>
+  
+  1. [Elm For Beginners](https://github.com/knowthen/elm)
 </details>
 
 ## [Udacity](./Udacity)
