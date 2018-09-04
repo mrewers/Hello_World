@@ -20,18 +20,22 @@
   1. [Visual Studio Code](https://github.com/mike-works/vscode-fundamentals)
 </details>
 
-<details>
-  <summary>Previous versions of courses:</summary>
-
-  1. [Introduction to Web Development](https://docs.google.com/presentation/d/1KeWOWSM28qYI1mtkuHkY2vB2UUhwNkg7sq_LPqfYXKs/edit#slide=id.g3902e45b2_083)
-</details>
 
 <details>
   <summary>Completed courses not in this repo:</summary>
 
-  1. [Complete Intro to Web Development, v2](https://btholt.github.io/intro-to-web-dev-v2/)
+  1. [Complete Introduction to Web Development, v2](https://btholt.github.io/intro-to-web-dev-v2/)
   1. [Full Stack for Front End Engineers](https://docs.google.com/presentation/d/1FPpbZ919vt8e1k2EGPd7BKhDlHao79ykvYLfDcMOsMo/edit#slide=id.p)
   1. Introduction to JavaScript Programming
+  1. [JavaScript: From Fundamentals to Functional JS, v2](https://slides.com/bgando/f2f-final-day-1#/)
+  1. [JavaScript: The Hard Parts](https://frontendmasters.com/assets/resources/willsentance/js-the-hard-parts.pdf)
+</details>
+
+<details>
+  <summary>Previous versions of courses:</summary>
+
+  1. [Introduction to Web Development, v1](https://docs.google.com/presentation/d/1KeWOWSM28qYI1mtkuHkY2vB2UUhwNkg7sq_LPqfYXKs/edit#slide=id.g3902e45b2_083)
+  1. [JavaScript: From Fundamentals to Functional JS, v1](https://slides.com/bgando/obj-arr-func#/)
 </details>
 
 ## [KnowThen](./KnowThen)
@@ -39,7 +43,7 @@
 [KnowThen](https://courses.knowthen.com/courses/)
 
 <details>
-  <summary>Original GitHub repos/info pages for FEM courses</summary>
+  <summary>Original GitHub repos for KnowThen courses</summary>
   
   1. [Elm For Beginners](https://github.com/knowthen/elm)
 </details>
