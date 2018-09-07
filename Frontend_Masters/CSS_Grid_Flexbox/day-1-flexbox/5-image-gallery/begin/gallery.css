@@ -14,7 +14,25 @@ ul {
 	padding: 0;
 	list-style-type: none;
 }
+img {
+  width: 100%;
+}
+
+.flex-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.flex-item {
+  flex: 0 0 100%;
+}
 @media (min-width: 550px) {
+  .flex-item {
+    flex: 0 0 50%;
+  }
 }
 @media (min-width: 850px) { 
+  .flex-item {
+    flex: 0 0 20%;
+  }
 }

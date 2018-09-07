@@ -34,19 +34,29 @@ nav ul {
   margin: 12px 0 0 0;
   border-bottom: 3px solid #cc8850;
   overflow: auto;
-
+}
+.floatleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.floatright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.full-width {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 /* splits nav into 2 columns
 http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
 nav li:nth-child(even) {
   width: 50%;
-  float: right;
   padding: 0.5em;
 }
 nav li:nth-child(odd) {
   width: 50%;
-  float: left;
-    padding: 0.5em;
+  padding: 0.5em;
 }
 nav a {
   color: #c80060;
@@ -58,26 +68,13 @@ nav a:hover {
   color:#00c4c7;
 }
 
-
-.row:before, 
-.row:after {
-    content:"";
-    display: table;
-    clear:both;
-}
 div.row {
+  display: flex;
+  flex-flow: row wrap;
   background-color: #fff6e0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 1em;
-}
-.floatleft {
-  float: left;
-  margin: 0 1em 1em 0;
-}
-.floatright {
-  float: right;
-  margin: 0 0 1em 1em;
 }
 [class*='sidebar'] {
   border: 1px solid #00c4c7;
@@ -148,31 +145,29 @@ footer a {
   width: 96.66666%;
 }
 
-
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) and (max-width: 849px) { 
   .wrapper {
-      width: 97%;
-      max-width: 767px;
-      float: none;
+    width: 97%;
+    max-width: 767px;
   }
- .col-1,
- .col-2,
- .col-1-2,
-.col-3,
-.col-4,
-.col-1-4 {
-  width: 96.66666%;
-}
-div.row {
-  padding: 0 2em;
-}
-aside[class*='sidebar'] {
-  float: left;
-  width: 47%;
-  margin-right: 3%;
-}
+
+  .col-1,
+  .col-2,
+  .col-1-2,
+  .col-3,
+  .col-4,
+  .col-1-4 {
+    flex: 0 0 96.66666%;
+  }
+  div.row {
+    padding: 0 2em;
+  }
+  aside[class*='sidebar'] {
+    float: left;
+    width: 47%;
+    margin-right: 3%;
+  }
 
   nav li,
   nav li:nth-child(even),
@@ -189,29 +184,27 @@ aside[class*='sidebar'] {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 850px) { 
   .wrapper {
-      width: 97%;
-      max-width: 1200px;
-      float: none;
+    width: 97%;
+    max-width: 1200px;
   }
 
   [class*='col-'] {
-    float: left;
     margin-left: 3.33333%;
     min-height: 1px;
   }
   .col-1,
   .col-1-2,
   .col-1-4 {
-    width: 20.83333%;
+    flex: 0 0 20.83333%;
   }
   .col-2 {
-    width: 44.99999%;
+    flex: 0 0 44.99999%;
   }
   .col-3 {
-    width: 69.16665%;
+    flex: 0 0 69.16665%;
   }
   .col-4 {
-    width: 96.66666%;
+    flex: 0 0 96.66666%;
   }
   h2 {
     font-size: 3em;
@@ -227,11 +220,10 @@ aside[class*='sidebar'] {
   nav li:nth-child(even),
   nav li:nth-child(odd) {
     display: inline-block;
-    float: none;
     width: auto;
     padding: 0;
   }
   nav a {
-      padding: 0em 1em 0em 1em;
+    padding: 0em 1em 0em 1em;
   }
 }
