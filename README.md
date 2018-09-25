@@ -15,7 +15,7 @@
   1. [Complete Intro to React, v3 (feat. Redux, Router & Flow)](https://github.com/btholt/complete-intro-to-react)
   1. [CSS Grids and Flexbox in Responsive Web](https://github.com/jen4web/fem-layout/)
   1. [Introduction to Vue.js](https://github.com/sdras/intro-to-vue)
-  1. [Mastering Chrome Developer Tools](https://github.com/jkup/mastering-chrome-devtools)
+  1. [Mastering Chrome Developer Tools, v2](https://github.com/jkup/mastering-chrome-devtools)
   1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo)
   1. [Visual Studio Code](https://github.com/mike-works/vscode-fundamentals)
 </details>
@@ -36,6 +36,7 @@
 
   1. [Introduction to Web Development, v1](https://docs.google.com/presentation/d/1KeWOWSM28qYI1mtkuHkY2vB2UUhwNkg7sq_LPqfYXKs/edit#slide=id.g3902e45b2_083)
   1. [JavaScript: From Fundamentals to Functional JS, v1](https://slides.com/bgando/obj-arr-func#/)
+  1. [Mastering Chrome Developer Tools, v1](https://github.com/jkup/mastering-chrome-devtools)
 </details>
 
 ## [KnowThen](./KnowThen)
