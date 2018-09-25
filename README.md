@@ -18,6 +18,7 @@
   1. [Mastering Chrome Developer Tools, v2](https://github.com/jkup/mastering-chrome-devtools)
   1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo)
   1. [Visual Studio Code](https://github.com/mike-works/vscode-fundamentals)
+  1. [Webpack 4 Fundamentals](https://github.com/TheLarkInn/webpack-workshop-2018)
 </details>
 
 
