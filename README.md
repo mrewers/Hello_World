@@ -14,6 +14,7 @@
   1. [Choosing a JavaScript Framework](https://github.com/btholt/jsmvc-pres)
   1. [Complete Intro to React, v3 (feat. Redux, Router & Flow)](https://github.com/btholt/complete-intro-to-react)
   1. [CSS Grids and Flexbox in Responsive Web](https://github.com/jen4web/fem-layout/)
+  1. [Introduction to Elm, v2](https://github.com/rtfeldman/elm-0.19-workshop/tree/master/intro)
   1. [Introduction to Vue.js](https://github.com/sdras/intro-to-vue)
   1. [Mastering Chrome Developer Tools, v2](https://github.com/jkup/mastering-chrome-devtools)
   1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo)
@@ -68,10 +69,11 @@
 
 [Wes Bos](https://wesbos.com/)
 
-* [JavaScript 30](https://javascript30.com/) - 30 challenges using vanilla JS
+  1. [Fullstack Advanced React and GraphQL](https://advancedreact.com/) - This is a course will walk you through building a full stack application with GraphQL API and Node.js on the backend and React and Apollo on the front end.
+  1. [JavaScript 30](https://javascript30.com/) - 30 challenges using vanilla JS
 
 ## You Don't Know JS
 
 [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) is a book series by Kyle Simpson that provides an in-depth explanation of the fundamental concepts underpinning JavaScript. This [repo](./You_Don't_Know_JS) contains notes and practice exercises I completed while reading the books.
 
-_Disclaimer: To the best of my knowledge all code included in this repo is all publicly available elsewhere. And I've made an effort to remove any code that would be considered._
+_Disclaimer: To the best of my knowledge all code included in this repo is publicly available elsewhere and freely available for educational purposes. I've made an effort not to include code that would be considered private. Please support these great educators in any way you can. They put tremendous effort into these resources and the whole development community is better off because of them._

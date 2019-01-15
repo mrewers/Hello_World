@@ -1,3 +1,6 @@
 [submodule "Frontend_Masters/Webpack-Workshop-2018"]
 	path = Frontend_Masters/Webpack-Workshop-2018
 	url = git@github.com:mrewers/webpack-workshop-2018.git
+[submodule "Frontend_Masters/Elm"]
+	path = Frontend_Masters/Elm
+	url = git@github.com:mrewers/fem-elm.git
