@@ -1,6 +1,8 @@
 
 
-## [Cryptozombies](./Cryptozombies)
+## [CryptoZombies](./Cryptozombies)
+
+[CryptoZombies](https://cryptozombies.io/)
 
 ## [Frontend Masters](./Frontend_Masters)
 
@@ -55,6 +57,11 @@
 
 [Udacity](https://www.udacity.com/)
 
+1. [How to Use Git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775)
+1. [Intro to HTML and CSS](https://www.udacity.com/course/intro-to-html-and-css--ud001)
+1. [Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)
+1. [Linux Command Line Basics](https://www.udacity.com/course/linux-command-line-basics--ud595)
+
 ## [Udemy](./Udemy)
 
 [Udemy](https://www.udemy.com/)
@@ -63,14 +70,21 @@
 
 [Watch and Code](https://watchandcode.com/)
 
-* [Practical JavaScript](https://watchandcode.com/p/practical-javascript)
+1. [Practical JavaScript](https://watchandcode.com/p/practical-javascript)
+
+## Webpack Academy 
+
+[Webpack Academy](https://webpack.academy/courses)
+
+1. Webpack: The Core Concepts
+1. Web Fundamentals
 
 ## [Wes Bos](./Wes_Bos)
 
 [Wes Bos](https://wesbos.com/)
 
-  1. [Fullstack Advanced React and GraphQL](https://advancedreact.com/) - This is a course will walk you through building a full stack application with GraphQL API and Node.js on the backend and React and Apollo on the front end.
-  1. [JavaScript 30](https://javascript30.com/) - 30 challenges using vanilla JS
+1. [Fullstack Advanced React and GraphQL](https://advancedreact.com/) - This is a course will walk you through building a full stack application with GraphQL API and Node.js on the backend and React and Apollo on the front end.
+1. [JavaScript 30](https://javascript30.com/) - 30 challenges using vanilla JS
 
 ## You Don't Know JS
 
