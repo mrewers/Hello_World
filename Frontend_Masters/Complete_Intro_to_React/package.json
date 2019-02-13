@@ -4,6 +4,7 @@
   "description": "",
   "main": "App.js",
   "scripts": {
+    "dev": "parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
     "format:check": "prettier --list-different \"src/**/*.{js,jsx,css,json}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
@@ -15,6 +16,11 @@
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "parcel-bundler": "^1.11.0",
     "prettier": "^1.16.4"
+  },
+  "dependencies": {
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
   }
 }
