@@ -14,7 +14,7 @@
   1. [Building Awesomer Apps with Angular](https://github.com/onehungrymind/angular-rest-app)
   1. [Build Cross-Platform Desktop Apps with Electron](https://gist.github.com/stevekinney/4cc5c61e827c00dbea55409f26d1da02)
   1. [Choosing a JavaScript Framework](https://github.com/btholt/jsmvc-pres)
-  1. [Complete Intro to React, v3 (feat. Redux, Router & Flow)](https://github.com/btholt/complete-intro-to-react)
+  1. [Complete Intro to React, v4)](https://github.com/btholt/complete-intro-to-react-v4)
   1. [CSS Grids and Flexbox in Responsive Web](https://github.com/jen4web/fem-layout/)
   1. [Introduction to Elm, v2](https://github.com/rtfeldman/elm-0.19-workshop/tree/master/intro)
   1. [Introduction to GraphQL](https://github.com/FrontendMasters/intro-to-graphql)
@@ -39,6 +39,7 @@
 <details>
   <summary>Previous versions of courses:</summary>
 
+  1. [Complete Intro to React, v3 (feat. Redux, Router & Flow)](https://github.com/btholt/complete-intro-to-react)
   1. [Introduction to Web Development, v1](https://docs.google.com/presentation/d/1KeWOWSM28qYI1mtkuHkY2vB2UUhwNkg7sq_LPqfYXKs/edit#slide=id.g3902e45b2_083)
   1. [JavaScript: From Fundamentals to Functional JS, v1](https://slides.com/bgando/obj-arr-func#/)
   1. [Mastering Chrome Developer Tools, v1](https://github.com/jkup/mastering-chrome-devtools)
