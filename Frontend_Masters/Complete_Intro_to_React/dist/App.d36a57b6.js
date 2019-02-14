@@ -28447,6 +28447,12 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _petfinderClient = _interopRequireDefault(require("petfinder-client"));
+
+var _router = require("@reach/router");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -28467,21 +28473,75 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+var petfinder = (0, _petfinderClient.default)({
+  key: "e5b80f29e0124b297e83035db24452f5",
+  secret: "8f100bcf7c9d921346af8db3451f47e3"
+});
+
 var Details =
 /*#__PURE__*/
 function (_Component) {
   _inherits(Details, _Component);
 
-  function Details() {
+  function Details(props) {
+    var _this;
+
     _classCallCheck(this, Details);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Details).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Details).call(this, props));
+    _this.state = {
+      loading: true
+    };
+    return _this;
   }
 
   _createClass(Details, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      petfinder.pet.get({
+        output: "full",
+        id: this.props.id
+      }).then(function (data) {
+        var pet = data.petfinder.pet;
+        var breed;
+
+        if (Array.isArray(pet.breeds.breed)) {
+          breed = pet.breeds.breed.join(", ");
+        } else {
+          breed = pet.breeds.breed;
+        }
+
+        _this2.setState({
+          name: pet.name,
+          animal: pet.animal,
+          location: "".concat(pet.contact.city, ", ").concat(pet.contact.state),
+          description: pet.description,
+          media: pet.media,
+          breed: breed,
+          loading: false
+        });
+      }).catch(function () {
+        (0, _router.navigate)("/");
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("h1", null, "Hello");
+      if (this.state.loading) {
+        return _react.default.createElement("h1", null, "Loading...");
+      }
+
+      var _this$state = this.state,
+          animal = _this$state.animal,
+          breed = _this$state.breed,
+          location = _this$state.location,
+          name = _this$state.name,
+          description = _this$state.description;
+      return _react.default.createElement("div", {
+        className: "details"
+      }, _react.default.createElement("div", null, _react.default.createElement("h1", null, name), _react.default.createElement("h2", null, animal, " - ", breed, " - ", location), _react.default.createElement("p", null, description)));
     }
   }]);
 
@@ -28490,7 +28550,7 @@ function (_Component) {
 
 var _default = Details;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","petfinder-client":"../node_modules/petfinder-client/index.js","@reach/router":"../node_modules/@reach/router/es/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
@@ -28580,7 +28640,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53786" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54879" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
