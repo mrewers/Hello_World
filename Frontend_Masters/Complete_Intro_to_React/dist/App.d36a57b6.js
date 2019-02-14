@@ -28483,16 +28483,22 @@ var Details =
 function (_Component) {
   _inherits(Details, _Component);
 
-  function Details(props) {
+  function Details() {
+    var _getPrototypeOf2;
+
     var _this;
+
+    var _temp;
 
     _classCallCheck(this, Details);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Details).call(this, props));
-    _this.state = {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Details)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       loading: true
-    };
-    return _this;
+    }, _temp));
   }
 
   _createClass(Details, [{
@@ -28640,7 +28646,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54879" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55193" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
