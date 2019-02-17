@@ -3,10 +3,10 @@ import { ANIMALS } from "petfinder-client";
 import { Consumer } from "./SearchContext";
 
 class SearchBox extends Component {
-  handleFormSubmit = ( e ) => {
+  handleFormSubmit = e => {
     e.preventDefault();
     this.props.search();
-  }
+  };
 
   render() {
     return (
