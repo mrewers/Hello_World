@@ -7,49 +7,6 @@ const petfinder = pf({
 });
 
 class SearchParams extends Component {
-  state = {
-    location: "Washington, DC",
-    animal: "",
-    breed: "",
-    breeds: []
-  };
-
-  handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
-
-  handleAnimalChange = event => {
-    this.setState(
-      {
-        animal: event.target.value,
-        breed: ""
-      },
-      this.getBreeds
-    );
-  };
-
-  getBreeds() {
-    if (this.state.animal) {
-      petfinder.breed.list({ animal: this.state.animal }).then(data => {
-        if (
-          data.petfinder &&
-          data.petfinder.breeds &&
-          Array.isArray(data.petfinder.breeds.breed)
-        ) {
-          this.setState({
-            breeds: data.petfinder.breeds.breed
-          });
-        } else {
-          this.setState({ breeds: [] });
-        }
-      });
-    } else {
-      this.setState({ breeds: [] });
-    }
-  }
-
   render() {
     return (
       <div className="search-params">
