@@ -28841,7 +28841,7 @@ function (_Component) {
 
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Details)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       loading: true,
-      showModal: true
+      showModal: false
     }, _this.toggleModal = function () {
       return _this.setState({
         showModal: !_this.state.showModal
