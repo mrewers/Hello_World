@@ -16,6 +16,7 @@
   1. [Choosing a JavaScript Framework](https://github.com/btholt/jsmvc-pres)
   1. [Complete Intro to React, v4)](https://github.com/btholt/complete-intro-to-react-v4)
   1. [CSS Grids and Flexbox in Responsive Web](https://github.com/jen4web/fem-layout/)
+  1. [Design for Developers](https://github.com/sdras/design-for-developers/blob/master/slides-pdf/Des4Dev2.pdf)
   1. [ES6: The Right Parts](https://frontendmasters.com/assets/resources/kylesimpson/getify-es6-workshop.zip)
   1. [Introduction to Elm, v2](https://github.com/rtfeldman/elm-0.19-workshop/tree/master/intro)
   1. [Introduction to GraphQL](https://github.com/FrontendMasters/intro-to-graphql)
