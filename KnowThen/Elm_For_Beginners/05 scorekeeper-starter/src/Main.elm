@@ -10,7 +10,7 @@ import Html.Events exposing (..)
 
 type alias Model =
     { players : List Player
-    , playerName : String
+    , name : String
     , playerId : Maybe Int
     , plays : List Play
     }
@@ -31,7 +31,7 @@ type alias Play =
 initModel : Model
 initModel =
     { players = []
-    , playerName = ""
+    , name = ""
     , playerId = Nothing
     , plays = []
     }
@@ -50,12 +50,74 @@ update : Msg -> Model -> Model
 update msg model =
     case msg of
         Input name ->
-            Debug.log "Input Updated Model"
-                { model | playerName = name }
+            { model | name = name }
+
+        Cancel ->
+            { model | name = "", playerId = Nothing }
+
+        Save ->
+            if ( String.isEmpty model.name ) then
+                model
+            else
+                save model
 
         _ ->
             model
 
+save : Model -> Model
+save model =
+    case model.playerId of
+        Just id ->
+            edit model id
+        
+        Nothing ->
+            add model
+
+
+edit : Model -> Int -> Model
+edit model id =
+    let
+        newPlayers =
+            List.map
+                (\player ->
+                    if player.id == id then
+                        { player | name = model.name }
+                    else
+                        player
+                )
+                model.players
+
+        newPlays =
+            List.map
+                (\play ->
+                    if play.playerId == id then
+                        { play | name = model.name }
+                    else
+                        play
+                )
+                model.plays
+    in
+        { model
+            | players = newPlayers
+            , plays = newPlays
+            , name = ""
+            , playerId = Nothing
+        }
+
+add : Model -> Model
+add model =
+    let
+        newPlayer =
+            Player (List.length model.players) model.name 0
+
+        newPlayers =
+            newPlayer :: model.players
+    in
+        { model
+            | players = newPlayers
+            , name = ""
+        }
+    
 
 -- view
 
@@ -64,9 +126,70 @@ view : Model -> Html Msg
 view model =
     div [ class "scoreboard" ]
         [ h1 [] [ text "Score Keeper" ]
+        , playerSection model
         , playerForm model
         ]
 
+
+playerSection : Model -> Html Msg
+playerSection model =
+    div []
+        [ playerListHeader
+        , playerList model
+        , pointTotal model
+        ]
+
+playerListHeader : Html Msg
+playerListHeader =
+    header []
+        [ div [] [ text "Name" ]
+        , div [] [ text "Points" ]
+        ]
+
+playerList : Model -> Html Msg
+playerList model =
+    model.players
+        |> List.sortBy .name
+        |> List.map playerEntry
+        |> ul []
+
+
+playerEntry : Player -> Html Msg
+playerEntry player =
+    li []
+        [ i
+            [ class "edit"
+            , onClick (Edit player)
+            ]
+            []
+        , div []
+            [ text player.name ]
+        , button
+            [ type_ "button"
+            , onClick (Score player 2)
+            ]
+            [ text "2pt" ]
+        , button
+            [ type_ "button"
+            , onClick (Score player 3)
+            ]
+            [ text "3pt" ]
+        , div []
+            [ text (String.fromInt player.points) ]
+        ]
+
+
+pointTotal : Model -> Html Msg
+pointTotal model =
+    let
+        total =
+            List.map .points model.plays
+                |> List.sum
+    in
+        footer []
+            [ div [] [ text "Total:" ]
+            , div [] [ text (String.fromInt total) ]
+            ]
 
 playerForm : Model -> Html Msg
 playerForm model =
@@ -75,7 +198,7 @@ playerForm model =
             [ type_ "text"
             , placeholder "Add/Edit Player.."
             , onInput Input
-            , value model.playerName
+            , value model.name
             ]
             []
         , button [ type_ "submit" ] [ text "save" ]
