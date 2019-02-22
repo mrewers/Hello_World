@@ -44,7 +44,7 @@ type Msg
     | Input String
     | Save
     | Cancel
-    | DeletePlay Player
+    | DeletePlay Play
 
 update : Msg -> Model -> Model
 update msg model =
@@ -67,8 +67,29 @@ update msg model =
         Edit player ->
             { model | name = player.name, playerId = Just player.id }
         
-        _ ->
-            model
+
+        DeletePlay play ->
+            deletePlay model play
+
+
+deletePlay : Model -> Play -> Model
+deletePlay model play =
+    let
+        newPlays =
+            List.filter (\p -> p.id /= play.id) model.plays
+
+        newPlayers =
+            List.map
+                (\player ->
+                    if player.id == play.playerId then
+                        { player | points = player.points - 1 * play.points }
+                    else
+                        player
+                )
+                model.players
+    in
+        { model | plays = newPlays, players = newPlayers }
+
 
 score : Model -> Player -> Int -> Model
 score model scorer points =
@@ -154,6 +175,7 @@ view model =
         [ h1 [] [ text "Score Keeper" ]
         , playerSection model
         , playerForm model
+        , playSection model
         ]
 
 
@@ -202,6 +224,41 @@ playerEntry player =
             [ text "3pt" ]
         , div []
             [ text (String.fromInt player.points) ]
+        ]
+
+
+playSection : Model -> Html Msg
+playSection model =
+    div []
+        [ playListHeader
+        , playList model
+        ]
+
+
+playList : Model -> Html Msg
+playList model =
+    model.plays
+        |> List.map playEntry
+        |> ul []
+
+
+playEntry : Play -> Html Msg
+playEntry play =
+    li []
+        [ i
+              [ class "remove"
+              , onClick (DeletePlay play)
+              ]
+              []
+        , div [] [ text play.name ]
+        , div [] [ text (String.fromInt play.points) ]
+        ]
+
+playListHeader : Html Msg
+playListHeader =
+    header []
+        [ div [] [ text "Plays" ]
+        , div [] [ text "Points" ]
         ]
 
 
