@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import faker from 'faker';
 
 import Comment from './Components/Comment';
+import ApprovalCard from './Components/ApprovalCard';
 
 const App = () => (
   <div>
@@ -10,25 +11,32 @@ const App = () => (
     <label className="label" htmlFor="name">Enter name:</label>
     <input id="name" type="text" />
     <div className="ui container comments">
-      <Comment
-        author={faker.name.firstName()}
-        date={faker.date.past().toDateString()}
-        image={faker.image.avatar()}
-        text={faker.lorem.sentence()}
-      />
-      <Comment
-        author={faker.name.firstName()}
-        date={faker.date.past().toDateString()}
-        image={faker.image.avatar()}
-        text={faker.lorem.sentence()}
-      />
-      <Comment
-        author={faker.name.firstName()}
-        date={faker.date.past().toDateString()}
-        image={faker.image.avatar()}
-        text={faker.lorem.sentence()}
-      />
+      <ApprovalCard>
+        <Comment
+          author={faker.name.firstName()}
+          date={faker.date.past().toDateString()}
+          image={faker.image.avatar()}
+          text={faker.lorem.sentence()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <Comment
+          author={faker.name.firstName()}
+          date={faker.date.past().toDateString()}
+          image={faker.image.avatar()}
+          text={faker.lorem.sentence()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <Comment
+          author={faker.name.firstName()}
+          date={faker.date.past().toDateString()}
+          image={faker.image.avatar()}
+          text={faker.lorem.sentence()}
+        />
+      </ApprovalCard>
     </div>
+    
   </div>
 )
 
