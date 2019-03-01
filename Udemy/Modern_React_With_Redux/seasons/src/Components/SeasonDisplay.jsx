@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SeasonDisplay = () => (
-  <div>Hello</div>
+const SeasonDisplay = ( { latitude } ) => (
+  <div>Latitude: {latitude}</div>
 )
 
 export default SeasonDisplay;
