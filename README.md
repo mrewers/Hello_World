@@ -36,6 +36,7 @@
   1. Introduction to JavaScript Programming
   1. [JavaScript: From Fundamentals to Functional JS, v2](https://slides.com/bgando/f2f-final-day-1#/)
   1. [JavaScript: The Hard Parts](https://frontendmasters.com/assets/resources/willsentance/js-the-hard-parts.pdf)
+  1. [JavaScript: The New Hard Parts](https://static.frontendmasters.com/resources/2018-05-23-javascript-new-hard-parts/new-hard-parts-slides.pdf)
 </details>
 
 <details>
