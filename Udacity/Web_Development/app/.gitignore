@@ -1,0 +1,6 @@
+# Virtual Environment #
+env
+__pycache__
+
+# Bite compiled
+*.pyc
