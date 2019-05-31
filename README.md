@@ -19,6 +19,7 @@
   1. [Debugging and Fixing Common JavaScript Errors](https://github.com/toddhgardner/getRANTR) - Todd Gardner
   1. [Design for Developers](https://github.com/sdras/design-for-developers/blob/master/slides-pdf/Des4Dev2.pdf) - Sarah Drasner
   1. [ES6: The Right Parts](https://frontendmasters.com/assets/resources/kylesimpson/getify-es6-workshop.zip) - Kyle Simpson
+  1. [Four Semesters of Computer Science in 5 Hours](https://github.com/btholt/four-semesters-of-cs) - Brian Holt
   1. [Intermediate React](https://github.com/btholt/complete-intro-to-react-v4/) - Brian Holt
   1. [Introduction to Elm, v2](https://github.com/rtfeldman/elm-0.19-workshop/tree/master/intro) - Richard Feldman
   1. [Introduction to GraphQL](https://github.com/FrontendMasters/intro-to-graphql) - Scott Moss
