@@ -11,17 +11,17 @@ describe("index.ts module", () => {
   //   expect((indexExports as any).Address).to.eq(undefined);
   //   const x: indexExports.Address = {} as any;
   // });
-  it("should have a AddressBook export (class)", () => {
-    expect(!!indexExports.AddressBook).to.eq(true, "export exists");
-    expect(typeof indexExports.AddressBook).to.eq("function", "export exists");
-    const ab = new indexExports.AddressBook();
-    expect(!!ab).to.eq(true, "can instantiate from AddressBook as a class");
-    expect(ab.constructor.name).to.eq("AddressBook");
-    expect(Object.keys(indexExports.AddressBook.prototype)).to.deep.eq(
-      ["addContact", "findContactByName"],
-      "should have addContact and findContactByName methods"
-    );
-  });
+  // it("should have a AddressBook export (class)", () => {
+  //   expect(!!indexExports.AddressBook).to.eq(true, "export exists");
+  //   expect(typeof indexExports.AddressBook).to.eq("function", "export exists");
+  //   const ab = new indexExports.AddressBook();
+  //   expect(!!ab).to.eq(true, "can instantiate from AddressBook as a class");
+  //   expect(ab.constructor.name).to.eq("AddressBook");
+  //   expect(Object.keys(indexExports.AddressBook.prototype)).to.deep.eq(
+  //     ["addContact", "findContactByName"],
+  //     "should have addContact and findContactByName methods"
+  //   );
+  // });
   it("should have a getVcardText export (function)", () => {
     expect(!!indexExports.getVcardText).to.eq(true, "export exists");
     expect(typeof indexExports.getVcardText).to.eq(

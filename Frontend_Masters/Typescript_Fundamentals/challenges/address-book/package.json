@@ -14,5 +14,14 @@
     "build": "tsc src/index.ts --outDir lib --types node --module commonjs --target ES2017",
     "test": "mocha"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "ts-node": "^8.2.0"
+  },
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "mocha": "^6.1.4",
+    "typescript": "^3.5.1"
+  }
 }
