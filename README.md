@@ -16,6 +16,7 @@
   1. [Choosing a JavaScript Framework](https://github.com/btholt/jsmvc-pres) - Brian Holt
   1. [Complete Intro to React, v4)](https://github.com/btholt/complete-intro-to-react-v4) - Brian Holt
   1. [CSS Grids and Flexbox in Responsive Web](https://github.com/jen4web/fem-layout/) - Jen Kramer
+  1. [Data Structures and Algorithms in JavaScript](https://github.com/kuychaco/algoClass) - Bianca Gandolfo
   1. [Debugging and Fixing Common JavaScript Errors](https://github.com/toddhgardner/getRANTR) - Todd Gardner
   1. [Design for Developers](https://github.com/sdras/design-for-developers/blob/master/slides-pdf/Des4Dev2.pdf) - Sarah Drasner
   1. [ES6: The Right Parts](https://frontendmasters.com/assets/resources/kylesimpson/getify-es6-workshop.zip) - Kyle Simpson
