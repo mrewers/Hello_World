@@ -39,7 +39,7 @@
 1. Deep JavaScript Foundations, v3 - Kyle Simpson
 1. Functional-Light JavaScript, v2 - Kyle Simpson
 1. [Full Stack for Front End Engineers](https://docs.google.com/presentation/d/1FPpbZ919vt8e1k2EGPd7BKhDlHao79ykvYLfDcMOsMo/edit#slide=id.p) - Jem Young
-1. Introduction to JavaScript Programming - Kyle Simpson
+1. [Getting Started with JavaScript, v2](https://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.pdf) - Kyle Simpson
 1. [JavaScript: From Fundamentals to Functional JS, v2](https://slides.com/bgando/f2f-final-day-1#/) - Bianca Gandolfo
 1. [JavaScript: The Hard Parts](https://frontendmasters.com/assets/resources/willsentance/js-the-hard-parts.pdf) - Will Sentance
 1. [JavaScript: The New Hard Parts](https://static.frontendmasters.com/resources/2018-05-23-javascript-new-hard-parts/new-hard-parts-slides.pdf) - Will Sentance
@@ -52,6 +52,7 @@
 
 1. [Complete Intro to React, v3 (feat. Redux, Router & Flow)](https://github.com/btholt/complete-intro-to-react) - Brian Holt
 1. Deep JavaScript Foundations - Kyle Simpson
+1. Introduction to JavaScript Programming (precursor to Getting Started with JavaScript) - Kyle Simpson
 1. [Introduction to Web Development, v1](https://docs.google.com/presentation/d/1KeWOWSM28qYI1mtkuHkY2vB2UUhwNkg7sq_LPqfYXKs/edit#slide=id.g3902e45b2_083) - Nina Zakharenko & Brian Holt
 1. [JavaScript: From Fundamentals to Functional JS, v1](https://slides.com/bgando/obj-arr-func#/) - Bianca Gandolfo
 1. [Mastering Chrome Developer Tools, v1](https://github.com/jkup/mastering-chrome-devtools) - Jon Kuperman
