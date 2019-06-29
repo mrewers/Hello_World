@@ -36,14 +36,15 @@
 
 1. [Complete Introduction to Web Development, v2](https://btholt.github.io/intro-to-web-dev-v2/) - Brian Holt
 1. CSS in-Depth, v2 - Estelle Weyl
-1. Deep JavaScript Foundations, v3 - Kyle Simpson
-1. Functional-Light JavaScript, v2 - Kyle Simpson
+1. [Deep JavaScript Foundations, v3](https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf) - Kyle Simpson
+1. [JavaScript the Recent Parts](https://static.frontendmasters.com/resources/2019-03-09-js-recent-parts/js-recent-parts.pdf) - Kyle Simpson
+1. [Functional-Light JavaScript, v3](http://static.frontendmasters.com/resources/2019-05-06-functional-light-v3/functional-light-v3.pdf) - Kyle Simpson
 1. [Full Stack for Front End Engineers](https://docs.google.com/presentation/d/1FPpbZ919vt8e1k2EGPd7BKhDlHao79ykvYLfDcMOsMo/edit#slide=id.p) - Jem Young
 1. [Getting Started with JavaScript, v2](https://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.pdf) - Kyle Simpson
 1. [JavaScript: From Fundamentals to Functional JS, v2](https://slides.com/bgando/f2f-final-day-1#/) - Bianca Gandolfo
 1. [JavaScript: The Hard Parts](https://frontendmasters.com/assets/resources/willsentance/js-the-hard-parts.pdf) - Will Sentance
 1. [JavaScript: The New Hard Parts](https://static.frontendmasters.com/resources/2018-05-23-javascript-new-hard-parts/new-hard-parts-slides.pdf) - Will Sentance
-1. The Good Parts of JavaScript and the Web - Douglas Crockford
+1. [The Good Parts of JavaScript and the Web](https://frontendmasters.com/assets/resources/douglascrockford/good-parts-day1.zip) - Douglas Crockford
 1. [The Hard Parts of Servers & Node.js](https://static.frontendmasters.com/resources/2019-04-24-servers-node-js/Hard-Parts-Servers-Node.pdf) - Will Sentance
    </details>
 
@@ -51,7 +52,8 @@
   <summary>Previous versions of courses:</summary>
 
 1. [Complete Intro to React, v3 (feat. Redux, Router & Flow)](https://github.com/btholt/complete-intro-to-react) - Brian Holt
-1. Deep JavaScript Foundations - Kyle Simpson
+1. [Deep JavaScript Foundations](https://frontendmasters.com/assets/kyle-simpson/js/deep-js-foundations.zip) - Kyle Simpson
+1. [Functional-Light JavaScript, v2](https://frontendmasters.com/assets/kyle-simpson/js/functional-js-updated.zip) - Kyle Simpson
 1. Introduction to JavaScript Programming (precursor to Getting Started with JavaScript) - Kyle Simpson
 1. [Introduction to Web Development, v1](https://docs.google.com/presentation/d/1KeWOWSM28qYI1mtkuHkY2vB2UUhwNkg7sq_LPqfYXKs/edit#slide=id.g3902e45b2_083) - Nina Zakharenko & Brian Holt
 1. [JavaScript: From Fundamentals to Functional JS, v1](https://slides.com/bgando/obj-arr-func#/) - Bianca Gandolfo
