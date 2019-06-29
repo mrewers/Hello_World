@@ -7,7 +7,7 @@ function addFavoriteBook(bookName) {
 
 // TODO: define printFavoriteBooks() function
 function printFavoriteBooks() {
-  console.log(`My ${favoriteBooks.count} favorite books are:`);
+  console.log(`My ${favoriteBooks.length} favorite books are:`);
   for (let bookName of favoriteBooks) {
     console.log(bookName);
   }
