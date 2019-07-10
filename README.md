@@ -22,6 +22,7 @@
 1. [Intermediate React](https://github.com/btholt/complete-intro-to-react-v4/) - Brian Holt
 1. [Introduction to Elm, v2](https://github.com/rtfeldman/elm-0.19-workshop/tree/master/intro) - Richard Feldman
 1. [Introduction to GraphQL](https://github.com/FrontendMasters/intro-to-graphql) - Scott Moss
+1. [Introduction to Node.js](https://github.com/FrontendMasters/intro-node-js/) - Scott Moss
 1. [Introduction to Vue.js](https://github.com/sdras/intro-to-vue) - Sarah Drasner
 1. [Mastering Chrome Developer Tools, v2](https://github.com/jkup/mastering-chrome-devtools) - Jon Kuperman
 1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo) - Mike North
