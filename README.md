@@ -26,6 +26,7 @@
 1. [Introduction to Vue.js](https://github.com/sdras/intro-to-vue) - Sarah Drasner
 1. [Mastering Chrome Developer Tools, v2](https://github.com/jkup/mastering-chrome-devtools) - Jon Kuperman
 1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo) - Mike North
+1. [Sass Fundamentals](https://github.com/mike-works/sass-fundamentals.git) - Mike North
 1. [SVG Essentials & Animation, v2](https://github.com/sdras/svg-workshop) - Sarah Drasner
 1. [TypeScript 3 Fundamentals, v2](https://github.com/mike-works/typescript-fundamentals) - Mike North
 1. [Visual Studio Code](https://github.com/mike-works/vscode-fundamentals) - Mike North
