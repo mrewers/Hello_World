@@ -7,11 +7,12 @@ contract Inbox {
     message = initialMessage;
   }
 
-  function setMessage(string setMessage) public {
+  function setMessage(string newMessage) public {
     message = newMessage;
   }
 
-  function getMessage() public view returns (string) {
-    return message;
-  }
+  // This function is made redundant byt the initial storage variable message
+  // function getMessage() public view returns (string) {
+  //   return message;
+  // }
 }
