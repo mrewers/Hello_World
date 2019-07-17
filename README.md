@@ -26,6 +26,7 @@
 1. [Introduction to Vue.js](https://github.com/sdras/intro-to-vue) - Sarah Drasner
 1. [Mastering Chrome Developer Tools, v2](https://github.com/jkup/mastering-chrome-devtools) - Jon Kuperman
 1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo) - Mike North
+1. [Responsive Web Typography, v2](https://github.com/jpamental/rwt-vf-workshop-full) - Jason Pamental
 1. [Sass Fundamentals](https://github.com/mike-works/sass-fundamentals.git) - Mike North
 1. [SVG Essentials & Animation, v2](https://github.com/sdras/svg-workshop) - Sarah Drasner
 1. [TypeScript 3 Fundamentals, v2](https://github.com/mike-works/typescript-fundamentals) - Mike North
@@ -46,6 +47,7 @@
 1. [JavaScript: From Fundamentals to Functional JS, v2](https://slides.com/bgando/f2f-final-day-1#/) - Bianca Gandolfo
 1. [JavaScript: The Hard Parts](https://frontendmasters.com/assets/resources/willsentance/js-the-hard-parts.pdf) - Will Sentance
 1. [JavaScript: The New Hard Parts](https://static.frontendmasters.com/resources/2018-05-23-javascript-new-hard-parts/new-hard-parts-slides.pdf) - Will Sentance
+1. [Scalable Modular Architecture for CSS (SMACSS)](https://frontendmasters.com/assets/resources/jonathansnook/smacss-slides.zip) - Jonathan Snook
 1. [The Good Parts of JavaScript and the Web](https://frontendmasters.com/assets/resources/douglascrockford/good-parts-day1.zip) - Douglas Crockford
 1. [The Hard Parts of Servers & Node.js](https://static.frontendmasters.com/resources/2019-04-24-servers-node-js/Hard-Parts-Servers-Node.pdf) - Will Sentance
    </details>
@@ -60,6 +62,7 @@
 1. [Introduction to Web Development, v1](https://docs.google.com/presentation/d/1KeWOWSM28qYI1mtkuHkY2vB2UUhwNkg7sq_LPqfYXKs/edit#slide=id.g3902e45b2_083) - Nina Zakharenko & Brian Holt
 1. [JavaScript: From Fundamentals to Functional JS, v1](https://slides.com/bgando/obj-arr-func#/) - Bianca Gandolfo
 1. [Mastering Chrome Developer Tools, v1](https://github.com/jkup/mastering-chrome-devtools) - Jon Kuperman
+1. [Website Performance](https://frontendmasters.com/assets/resources/kylesimpson/frontendmastersII-slides.pdf) - Kyle Simpson
    </details>
 
 ## [KnowThen](./KnowThen)
@@ -84,6 +87,9 @@
 ## [Udemy](./Udemy)
 
 [Udemy](https://www.udemy.com/)
+
+1. [Ethereum and Solidity: The Complete Developer's Guide](https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/) - Stephen Grider
+1. [Modern React with Redux - 2019 Update](https://www.udemy.com/react-redux/) - Stephen Grider
 
 ## [Watch and Code](./Watch_And_Code)
 
