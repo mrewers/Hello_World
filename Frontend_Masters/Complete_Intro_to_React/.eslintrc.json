@@ -7,10 +7,12 @@
     "prettier",
     "prettier/react"
   ],
-  "plugins": ["react", "import", "jsx-a11y"],
+  "plugins": ["react", "react-hooks", "import", "jsx-a11y"],
   "rules": {
     "react/prop-types": 0,
-    "no-console": 1
+    "no-console": 1,
+    "react-hooks/exhaustive-deps": 1,
+    "react-hooks/rules-of-hook": 2
   },
   "parserOptions": {
     "ecmaVersion": 2018,
