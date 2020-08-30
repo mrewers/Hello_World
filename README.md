@@ -35,6 +35,7 @@
 1. [Modern Search Engine Optimization (SEO)](https://github.com/mike-works/modern-seo) - Mike North
 1. [Responsive Web Typography, v2](https://github.com/jpamental/rwt-vf-workshop-full) - Jason Pamental
 1. [Sass Fundamentals](https://github.com/mike-works/sass-fundamentals.git) - Mike North
+1. [State Machines in JavaScript with XState](https://github.com/davidkpiano/frontend-masters-xstate-workshop) - David Khourshid
 1. [SVG Essentials & Animation, v2](https://github.com/sdras/svg-workshop) - Sarah Drasner
 1. [Testing React Applications, v2](https://github.com/kentcdodds/testing-workshop/tree/fem-2018) - Kent C. Dodds
 1. [TypeScript 3 Fundamentals, v2](https://github.com/mike-works/typescript-fundamentals) - Mike North
