@@ -3,23 +3,33 @@ const elBox = document.querySelector('#box');
 // Pure function that returns the next state,
 // given the current state and sent event
 function transition(state, event) {
-  switch (
-    state
-    // Add your state/event transitions here
-    // to determine and return the next state
-  ) {
+  switch (state) {
+    case 'active':
+      if (event === 'click') {
+        return 'inactive';
+      } else {
+        return state;
+      }
+    case 'inactive':
+      if (event === 'click') {
+        return 'active';
+      } else {
+        return state;
+      }
+    default:
+      return state;
   }
 }
 
 // Keep track of your current state
-let currentState = undefined;
+let currentState = 'inactive';
 
 function send(event) {
-  // Determine the next value of `currentState`
+  currentState = transition(currentState, event);
 
   elBox.dataset.state = currentState;
 }
 
 elBox.addEventListener('click', () => {
-  // send a click event
+  send('click');
 });
