@@ -1,26 +1,46 @@
 const elBox = document.querySelector('#box');
 
-// Pure function that returns the next state,
-// given the current state and sent event
+// Switch Style
+// function transition(state, event) {
+//   switch (state) {
+//     case 'active':
+//       switch (event) {
+//         case 'CLICK':
+//           return 'inactive';
+//         default:
+//           return state;
+//       }
+//     case 'inactive':
+//       switch (event) {
+//         case 'CLICK':
+//           return 'active';
+//         default:
+//           return state;
+//       }
+//     default:
+//       return state;
+//   }
+// }
+
+// Object Style
+const machine = {
+  initial: 'inactive',
+  states: {
+    inactive: {
+      on: {
+        CLICK: 'active',
+      },
+    },
+    active: {
+      on: {
+        CLICK: 'inactive',
+      },
+    },
+  },
+};
+
 function transition(state, event) {
-  switch (state) {
-    case 'active':
-      switch (event) {
-        case 'CLICK':
-          return 'inactive';
-        default:
-          return state;
-      }
-    case 'inactive':
-      switch (event) {
-        case 'CLICK':
-          return 'active';
-        default:
-          return state;
-      }
-    default:
-      return state;
-  }
+  return machine.states[state].on[event] || state;
 }
 
 // Keep track of your current state
