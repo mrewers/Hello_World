@@ -5,16 +5,18 @@ const elBox = document.querySelector('#box');
 function transition(state, event) {
   switch (state) {
     case 'active':
-      if (event === 'click') {
-        return 'inactive';
-      } else {
-        return state;
+      switch (event) {
+        case 'CLICK':
+          return 'inactive';
+        default:
+          return state;
       }
     case 'inactive':
-      if (event === 'click') {
-        return 'active';
-      } else {
-        return state;
+      switch (event) {
+        case 'CLICK':
+          return 'active';
+        default:
+          return state;
       }
     default:
       return state;
@@ -31,5 +33,5 @@ function send(event) {
 }
 
 elBox.addEventListener('click', () => {
-  send('click');
+  send('CLICK');
 });
