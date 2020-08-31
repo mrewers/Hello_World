@@ -55,6 +55,7 @@
 1. [Complete Intro to React, v4)](https://github.com/btholt/complete-intro-to-react-v4) - Brian Holt
 1. CSS in-Depth, v2 - Estelle Weyl
 1. [Deep JavaScript Foundations, v3](https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf) - Kyle Simpson
+1. [Digging Into Node.js](https://static.frontendmasters.com/resources/2019-05-09-digging-into-node/digging-into-node.zip) - Kyle Simpson
 1. Introduction to Data Structures for Interviews - Bianca Gandolfo
 1. [Introduction to Data Visualization with D3, v4](https://slides.com/shirleywu/fm-d3intro#/) - Shirley Wu
 1. [JavaScript the Recent Parts](https://static.frontendmasters.com/resources/2019-03-09-js-recent-parts/js-recent-parts.pdf) - Kyle Simpson
