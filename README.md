@@ -29,6 +29,7 @@
 1. [Introduction to Gatsby](https://github.com/frontendmasters/gatsby-intro) - Jason Lengstorf
 1. [Introduction to GraphQL](https://github.com/FrontendMasters/intro-to-graphql) - Scott Moss
 1. [Introduction to Node.js](https://github.com/FrontendMasters/intro-node-js/) - Scott Moss
+1. [Introduction to Serverless Functions](https://github.com/FrontendMasters/serverless-functions/) - Jason Lengstorf
 1. [Introduction to Vue.js](https://github.com/sdras/intro-to-vue) - Sarah Drasner
 1. [JavaScript Performance](https://gist.github.com/stevekinney/fe401ffb8b2b7279e56dd165b272f0c3) - Steve Kinney
 1. [Mastering Chrome Developer Tools, v2](https://github.com/jkup/mastering-chrome-devtools) - Jon Kuperman
